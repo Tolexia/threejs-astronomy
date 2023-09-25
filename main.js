@@ -29,6 +29,7 @@ const parameters = {
 /**
  * Textures
  */
+const baseUrl = (window.location.href.includes("threejs-astronomy") ? "/dist" : "/threejs-astronomy/dist");
 const textureLoader = new THREE.TextureLoader();
 
 // const textureQuality = isMobile() ? '4k' : '8k';
@@ -49,9 +50,9 @@ const specularTexture = textureLoader.load(
   `https://closure.vps.wbsprt.com/files/earth/${textureQuality}_earth_specular_map.png`,
 );
 const moonTexture = textureLoader.load(
-  `/dist/moon.jpg`,
+  `${baseUrl}/moon.jpg`,
 );
-const starTexture = textureLoader.load('/dist/star.png')
+const starTexture = textureLoader.load(`${baseUrl}/star.png`)
 // sky textures
 // http://www.shadedrelief.com/natural3/pages/clouds.html
 const skyTextures = [];
