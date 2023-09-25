@@ -29,7 +29,7 @@ const parameters = {
 /**
  * Textures
  */
-const baseUrl = (window.location.href.includes("threejs-astronomy") ? "/dist" : "/threejs-astronomy/dist");
+const baseUrl = (window.location.href.includes("threejs-astronomy") ? "/threejs-astronomy/dist" : "/dist");
 const textureLoader = new THREE.TextureLoader();
 
 // const textureQuality = isMobile() ? '4k' : '8k';
