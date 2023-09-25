@@ -31,7 +31,8 @@ const parameters = {
  */
 const textureLoader = new THREE.TextureLoader();
 
-const textureQuality = isMobile() ? '4k' : '8k';
+// const textureQuality = isMobile() ? '4k' : '8k';
+const textureQuality = '4k';
 
 // surface textures
 // source https://www.solarsystemscope.com/textures/
@@ -48,9 +49,9 @@ const specularTexture = textureLoader.load(
   `https://closure.vps.wbsprt.com/files/earth/${textureQuality}_earth_specular_map.png`,
 );
 const moonTexture = textureLoader.load(
-  `/moon.jpg`,
+  `/dist/moon.jpg`,
 );
-const starTexture = textureLoader.load('/star.png')
+const starTexture = textureLoader.load('/dist/star.png')
 // sky textures
 // http://www.shadedrelief.com/natural3/pages/clouds.html
 const skyTextures = [];
