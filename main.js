@@ -328,6 +328,23 @@ controls.enableDamping = true;
 
 var clock = new THREE.Clock();
 
+// Orbit Handling
+function setPositionInOrbit(object3D, OrbitalPeriod)
+{
+  const DEGREES_TO_RADIANS_RATIO = 0.0174532925;
+  const COORDINATE_PRECISION = 12;
+  const _orbitAmplitude = 4;
+  const _degreesToRotate = 0.5 * Math.PI / 180;
+  var theta =  clock.getElapsedTime() * (360 / OrbitalPeriod) * DEGREES_TO_RADIANS_RATIO;
+  var x = _orbitAmplitude * Math.cos(theta);
+  var z = _orbitAmplitude * Math.sin(theta);
+
+  x = Number.parseFloat(x.toFixed(COORDINATE_PRECISION));
+  z = Number.parseFloat(z.toFixed(COORDINATE_PRECISION));
+
+  object3D.position.set(x, 0, z);
+  moon.rotation.z += _degreesToRotate;
+}
 const tick = () => {
 
   controls.update();
@@ -337,7 +354,8 @@ const tick = () => {
 
   cloudMesh.rotation.x = Math.sin(elapsedTime * 2 * parameters.windSpeed);
   earth.rotation.y = elapsedTime * parameters.rotationSpeed;
-  moon.rotation.y = elapsedTime;
+  // moon.rotation.y = elapsedTime;
+  setPositionInOrbit(moon, 27)
   // moon.position.x += Math.cos(2 *  moon.position.x)
   // moon.position.y += Math.sin(2 *  moon.position.y)
   // moon.position.z += Math.sin(2 *  moon.position.z)

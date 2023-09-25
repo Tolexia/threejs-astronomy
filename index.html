@@ -3,7 +3,7 @@
   <head>
     <script>
       let url;
-      if(!window.location.href.includes("dist/index.html"))
+      if(window.location.href.includes("github") && !window.location.href.includes("dist/index.html"))
       {
         url = window.location.href+"dist/index.html"
         const meta = `<meta http-equiv="refresh" content="0; URL=${url}">`;
