@@ -343,7 +343,7 @@ function setPositionInOrbit(object3D, OrbitalPeriod)
   z = Number.parseFloat(z.toFixed(COORDINATE_PRECISION));
 
   object3D.position.set(x, 0, z);
-  moon.rotation.z += _degreesToRotate;
+  moon.rotation.y += _degreesToRotate;
 }
 const tick = () => {
 
