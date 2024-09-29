@@ -78,12 +78,12 @@ const displacementTexture = textureLoader.load(
 const cubeTextureLoader = new THREE.CubeTextureLoader();
 const environmentMapTexture = cubeTextureLoader.load(
   [
-    'https://closure.vps.wbsprt.com/files/earth/space/px.png',
-    'https://closure.vps.wbsprt.com/files/earth/space/nx.png',
-    'https://closure.vps.wbsprt.com/files/earth/space/py.png',
-    'https://closure.vps.wbsprt.com/files/earth/space/ny.png',
-    'https://closure.vps.wbsprt.com/files/earth/space/pz.png',
-    'https://closure.vps.wbsprt.com/files/earth/space/nz.png',
+    './px.avif',
+    './nx.avif',
+    './py.avif',
+    './ny.avif',
+    './pz.avif',
+    './nz.avif',
   ],
 );
 
