@@ -38,16 +38,16 @@ const textureQuality = '4k';
 // surface textures
 // source https://www.solarsystemscope.com/textures/
 const dayTexture = textureLoader.load(
-  `https://closure.vps.wbsprt.com/files/earth/${textureQuality}_earth_daymap.jpg`,
+  `./${textureQuality}_earth_daymap.avif`,
 );
 const nightTexture = textureLoader.load(
-  `https://closure.vps.wbsprt.com/files/earth/${textureQuality}_earth_nightmap.jpg`,
+  `./${textureQuality}_earth_nightmap.avif`,
 );
 const normalTexture = textureLoader.load(
-  `https://closure.vps.wbsprt.com/files/earth/${textureQuality}_earth_normal_map.png`,
+  `./${textureQuality}_earth_normal_map.avif`,
 );
 const specularTexture = textureLoader.load(
-  `https://closure.vps.wbsprt.com/files/earth/${textureQuality}_earth_specular_map.png`,
+  `./${textureQuality}_earth_specular_map.avif`,
 );
 const moonTexture = textureLoader.load(
   `${baseUrl}/moon.jpg`,
@@ -57,7 +57,7 @@ const starTexture = textureLoader.load(`${baseUrl}/star.png`)
 // http://www.shadedrelief.com/natural3/pages/clouds.html
 const skyTextures = [];
 const cloudySkyTexture = textureLoader.load(
-  `https://closure.vps.wbsprt.com/files/earth/europe_clouds_${textureQuality}.jpg`,
+  `./europe_clouds_${textureQuality}.avif`,
 );
 skyTextures.push(cloudySkyTexture);
 
